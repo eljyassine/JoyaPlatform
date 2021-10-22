@@ -1,0 +1,42 @@
+[debug] [2020-11-16T16:13:34.726Z] ----------------------------------------------------------------------
+[debug] [2020-11-16T16:13:34.728Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\elj_y\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-11-16T16:13:34.728Z] CLI Version:   8.16.2
+[debug] [2020-11-16T16:13:34.728Z] Platform:      win32
+[debug] [2020-11-16T16:13:34.728Z] Node Version:  v15.0.1
+[debug] [2020-11-16T16:13:34.730Z] Time:          Mon Nov 16 2020 17:13:34 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2020-11-16T16:13:34.730Z] ----------------------------------------------------------------------
+[debug] [2020-11-16T16:13:34.730Z] 
+[debug] [2020-11-16T16:13:34.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-16T16:13:34.736Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\elj_y\Projects\lovefitapp
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using joya-48b90. 
+[debug] [2020-11-16T16:14:10.912Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/joya-48b90  
+ 
+[debug] [2020-11-16T16:14:11.475Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 16 Nov 2020 16:14:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 

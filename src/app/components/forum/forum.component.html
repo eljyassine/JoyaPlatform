@@ -1,0 +1,270 @@
+	 
+	 
+	 <section class="parallax_window_in" data-parallax="scroll" data-image-src="../../../assets/img/backgrounddiabet.jpg" data-natural-width="1400" data-natural-height="470">
+    <div id="sub_content_in">
+      <h1>Joya Forum </h1>
+      <p>  </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container_styled_1">
+		<div class="container margin_60_35">
+			<div class="row">
+				<aside class="col-md-3 col-md-push-9" id="sidebar">
+					<div class="theiaStickySidebar">
+						<div id="filters_col">
+							<a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
+							<div class="collapse" id="collapseFilters">
+								<div class="filter_type">
+									<h6>Recherche</h6>
+									<input type="text" id="range" name="range" value="">
+								</div>
+								<div class="filter_type">
+									<h6>Type</h6>
+									<ul>
+										<li>
+											<label>All </label>
+											<input type="checkbox" class="js-switch" checked>
+										</li>
+										<li>
+											<label>Fitness</label>
+											<input type="checkbox" class="js-switch">
+										</li>
+										<li>
+											<label>Nutrition</label>
+											<input type="checkbox" class="js-switch">
+										</li>
+										<li>
+											<label> Mental Health</label>
+											<input type="checkbox" class="js-switch">
+										</li>
+									
+									</ul>
+								</div>
+							
+
+							</div>
+							<!--End collapse -->
+						</div>
+						<!--End filters col-->
+					</div>
+					<!--End Sticky -->
+				</aside>
+        <!--End aside -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-9 col-md-pull-3">
+					<div class="row">
+            <div *ngIf="iduser !=''">
+              <form #ff="ngForm" (ngSubmit)="b(ff)"  style="margin-bottom: 5%;">
+                
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea3">Votre Question :</label>
+                 
+									<input ngModel type="text" class="form-control form-control-sm mb-3" name="titre" id="titre" #titre="ngModel" placeholder="Titre"  required>
+									<div class="form-control error"  *ngIf="titre.invalid && titre.touched" >titre  est Obligatoire </div>
+
+
+									<input ngModel type="text"  #category="ngModel" class="form-control form-control-sm mb-3"  name ="category"id="type" placeholder="Fitness/Nourriture/santé mentale" required >
+									<div class="form-control error"  *ngIf="category.invalid && category.touched" >category est Obligatoire </div>
+									
+									<textarea  ngModel #desc="ngModel" class="form-control"  name="description" id="exampleFormControlTextarea3" rows="3" required></textarea>
+									<div class="form-control error"  *ngIf="desc.invalid && desc.touched" >Erreur  </div>
+                </div>
+                <input type="submit"  class="btn btn-primary" value="Partager" [disabled]="ff.invalid">
+                
+              </form>
+						</div>
+						
+
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+							<div class="course_container" *ngFor="let pb of pub">
+						
+                <img  class="img-circle col-md-2"  [src] ="pb.photo" alt=""  style="height: 70px;	width: 100px;">
+                 <div class="col-md-10 row">
+                     <h5 class="user-name col-md-6">{{pb.first}}   {{pb.last}}</h5>
+ 
+                     <div class="col-md-6 post-date"><i class="far fa-clock"></i>{{pb.date}} </div>
+ 
+                     <p class="post-text col-md-12">
+ 
+                        {{pb.description}}
+ 
+                         
+                     </p>
+ 
+                  </div>
+        
+                <div class="post-coments col-md-12 align-self-end">
+								
+               <div class="comment"  *ngFor="let cmm of pb.comments" >
+                   <div class="comment-object  col-md-12 row">
+                       <div class="col-md-12 row">
+                           <div class="comment-username col-md-4">
+                               <h5 class="col-md-12 comment-username"><i class="fas fa-user"></i> {{cmm.id}}</h5>
+                               <h6 class="col-md-12 comment-date"><i class="far fa-clock"></i>{{cmm.date}}</h6>
+                           </div>
+ 
+                           <p class=" col-md-8 comment-text">{{cmm.msg}}
+                           </p>
+                       </div>
+                   </div>
+               </div>
+             
+ 
+         </div>  
+        <!-- <button class="add-comment-button-2 float-right"  > Comment<i class="far fa-comment" style="color: black;"></i> </button> -->
+				
+
+				
+				 <form #fff="ngForm" (ngSubmit)="addcomment(fff)" style="margin-left:13% ; margin-top:3%" >
+                
+					<div class="form-group" style="	margin-bottom: 2px; ">
+					
+
+						<label for="exampleFormControlTextarea3">Comments  :</label>
+						<textarea style="background-color: rgba(221, 200, 200, 0.144);" ngModel #comment="ngModel" class="form-control"  name="comment" id="exampleFormControlTextarea3" rows="2" ></textarea>
+						<div class="form-control error"  *ngIf="comment.invalid && comment.touched" >Erreur  </div>
+					</div>
+					<input    type="submit"  class="add-comment-button-2 float-right" value="Add" [disabled]="fff.invalid">
+					
+				</form>
+
+				 
+     
+							
+							</div>
+
+					</div>
+      
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<nav>
+						<ul class="pagination">
+							<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+							</li>
+							<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a>
+							</li>
+							<li><a href="#">2</a>
+							</li>
+							<li><a href="#">3</a>
+							</li>
+							
+							
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+                <!-- End col -->
+			</div>
+			<!-- End Row -->
+		</div>
+		<!-- End container -->
+     </div>
+	<!-- End container_styled_1 -->
+
+
+
+
+
+	<div id="toTop"></div>
+	<!-- Back to top button -->
+
+
+
+
+		
